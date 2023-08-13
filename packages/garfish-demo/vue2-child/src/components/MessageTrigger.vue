@@ -11,9 +11,7 @@
       <a-select
         v-decorator="['type', { initialValue: 'success', rules: [{ required: true, message: '消息类型不能为空!' }] }]"
       >
-        <a-select-option v-for="(type, _i) in types" :key="type.value" :value="type.value">{{
-          type.label
-        }}</a-select-option>
+        <a-select-option v-for="type in types" :key="type.value" :value="type.value">{{ type.label }}</a-select-option>
       </a-select>
     </a-form-item>
     <a-row type="flex" justify="center">
@@ -69,12 +67,12 @@ export default {
     }
   },
   beforeCreate() {
-    //@ts-ignore
+    //@ts-expect-error miss types
     this.form = this.$form.createForm(this, { name: 'form' })
   },
   methods: {
     sendMessage() {
-      //@ts-ignore
+      //@ts-expect-error miss types
       this.form.validateFields((err, values) => {
         if (!err) {
           window?.Garfish.channel.emit('message', {
