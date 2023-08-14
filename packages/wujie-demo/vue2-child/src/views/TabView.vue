@@ -14,8 +14,8 @@
 
 <script lang="ts">
 import { Tabs, Input } from 'ant-design-vue'
-import MessageTrigger from '@/components/MessageTrigger'
-import Counter from '@/components/Counter'
+import MessageTrigger from '@/components/MessageTrigger.vue'
+import Counter from '@/components/Counter.vue'
 
 export default {
   name: 'TabView',

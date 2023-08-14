@@ -62,10 +62,12 @@ export default {
     }
   },
   beforeCreate() {
+    //@ts-expect-error miss types
     this.form = this.$form.createForm(this, { name: 'form' })
   },
   methods: {
     sendMessage() {
+      //@ts-expect-error miss types
       this.form.validateFields((err, values) => {
         if (!err) {
           dispatchReceiveMessageEvent(values)
