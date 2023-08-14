@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk_wujie_demo_vue2_child"]=self["webpackChunk_wujie_demo_vue2_child"]||[]).push([[163],{83163:function(e,u,n){n.r(u),n.d(u,{default:function(){return o}});var t=function(){var e=this,u=e._self._c;return u("router-view")},r=[],i={name:"Layout"},l=i,_=n(12410),c=(0,_.Z)(l,t,r,!1,null,"28413651",null),o=c.exports}}]);
+//# sourceMappingURL=163.20f3db1f.js.map

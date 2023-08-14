@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk_icestark_demo_vue2_child"]=self["webpackChunk_icestark_demo_vue2_child"]||[]).push([[163],{83163:function(e,u,t){t.r(u),t.d(u,{default:function(){return _}});var n=function(){var e=this,u=e._self._c;return u("router-view")},r=[],c={name:"Layout"},i=c,l=t(12410),s=(0,l.Z)(i,n,r,!1,null,"28413651",null),_=s.exports}}]);
+//# sourceMappingURL=163.d7dbabd5.js.map
