@@ -35,11 +35,17 @@ const router = createRouter({
       children: [
         {
           path: 'communication-test',
-          component: () => import('@/views/merak/Vue2.vue')
+          component: () => import('@/views/merak/Vue2.vue'),
+          props: {
+            routePath: '/'
+          }
         },
         {
           path: 'navigate-view',
-          component: () => import('@/views/merak/Vue2.vue')
+          component: () => import('@/views/merak/Vue2.vue'),
+          props: {
+            routePath: '/navigate-view'
+          }
         }
       ]
     },
@@ -49,11 +55,17 @@ const router = createRouter({
       children: [
         {
           path: 'communication-test',
-          component: () => import('@/views/merak/React.vue')
+          component: () => import('@/views/merak/React.vue'),
+          props: {
+            routePath: '/'
+          }
         },
         {
           path: 'navigate-view',
-          component: () => import('@/views/merak/React.vue')
+          component: () => import('@/views/merak/React.vue'),
+          props: {
+            routePath: '/navigate-view'
+          }
         }
       ]
     },
@@ -63,11 +75,17 @@ const router = createRouter({
       children: [
         {
           path: 'communication-test',
-          component: () => import('@/views/merak/Vite.vue')
+          component: () => import('@/views/merak/Vite.vue'),
+          props: {
+            routePath: '/'
+          }
         },
         {
           component: () => import('@/views/merak/Vite.vue'),
-          path: 'navigate-view'
+          path: 'navigate-view',
+          props: {
+            routePath: '/navigate-view'
+          }
         }
       ]
     },

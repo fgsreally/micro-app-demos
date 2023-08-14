@@ -12,8 +12,7 @@
 
 <script lang="ts" setup>
 import { MerakApp, $$namespace } from 'merak-vue'
-import { useRoute } from 'vue-router'
-import { nextTick, watch } from 'vue'
+import { watch } from 'vue'
 // eslint-disable-next-line vue/no-setup-props-destructure
 const props = defineProps<{
   routePath?: string
@@ -21,21 +20,19 @@ const props = defineProps<{
   afterMount?: () => void
 }>()
 
-const route = useRoute()
 function RouteChange() {
+  console.log(props.routePath)
   $$namespace().emitter.emit('vue2App:router-change', {
-    path: props.routePath || route.path.replace('/vue2App', ''),
+    path: props.routePath,
     replace: true
   })
   props.afterMount?.()
 }
 watch(
-  () => route.path,
-  async (n, o) => {
-    if (n.includes('vue2') && o.includes('vue2')) {
-      await nextTick()
-      RouteChange()
-    }
+  () => props.routePath,
+  async () => {
+    console.log('watch')
+    RouteChange()
   }
 )
 const url = import.meta.env.VITE_VUE2_CHILD_ENTRY
