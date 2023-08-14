@@ -13,7 +13,7 @@
 - icestark demo：[https://fgsreally.github.io/micro-app-demos/icestark-demo/vue3-main/](https://fgsreally.github.io/micro-app-demos/icestark-demo/vue3-main/)
 - wujie demo：[https://fgsreally.github.io/micro-app-demos/wujie-demo/vue3-main/](https://fgsreally.github.io/micro-app-demos/wujie-demo/vue3-main/)
 - Garfish demo：[https://fgsreally.github.io/micro-app-demos/garfish-demo/vue3-main/](https://fgsreally.github.io/micro-app-demos/garfish-demo/vue3-main/)
-
+- Garfish demo：[https://fgsreally.github.io/micro-app-demos/merak-demo/vue3-main/](https://fgsreally.github.io/micro-app-demos/merak-demo/vue3-main/)
 
 **各应用仓库地址：**
 
@@ -22,3 +22,4 @@
 - [icestark demo](https://github.com/fgsreally/micro-app-demos/tree/main/packages/icestark-demo)
 - [wujie demo](https://github.com/fgsreally/micro-app-demos/tree/main/packages/wujie-demo)
 - [Garfish demo](https://github.com/fgsreally/micro-app-demos/tree/main/packages/garfish-demo)
+- [Merak demo](https://github.com/fgsreally/micro-app-demos/tree/main/packages/merak-demo)

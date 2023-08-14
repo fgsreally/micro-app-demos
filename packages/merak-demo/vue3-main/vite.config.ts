@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
         '../../../micro-app-demos/merak-demo/vue3-main'
       )
     },
-    define: { __DEV__: true },
+    define: { __DEV__: process.env.CI?false:true },
     server: {
       port: 8081,
       open: true
