@@ -4,7 +4,6 @@ import jsxCustomEvent from '@micro-zoe/micro-app/polyfill/jsx-custom-event'
 import { Alert, Cascader, Form, Space } from 'antd'
 import { useState } from 'react'
 import { useAppSelector } from '@/stores/storeHooks'
-import microApp from '@micro-zoe/micro-app'
 
 export const vue2AppEntry = process.env.REACT_APP_VUE2_CHILD_PUBLIC_PATH as string
 export const viteAppEntry = process.env.REACT_APP_VITE_CHILD_PUBLIC_PATH as string

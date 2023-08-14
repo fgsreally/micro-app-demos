@@ -39,10 +39,12 @@ export default {
   },
   created() {
     // 获取主应用下发的路由对象
+    //@ts-expect-error  mainAppRouter
     this.mainAppRouter = window?.microApp.getData()?.router
   },
   methods: {
-    navigate(url) {
+    navigate(url: string) {
+      //@ts-expect-error mainAppRouter
       this.mainAppRouter?.push(url)
     }
   },
