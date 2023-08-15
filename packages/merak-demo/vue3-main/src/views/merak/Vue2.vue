@@ -6,13 +6,12 @@
     :props="{
       router: $router
     }"
-    @after-mount="RouteChange"
   ></merak-app>
 </template>
 
 <script lang="ts" setup>
-import { MerakApp, $$namespace } from 'merak-vue'
-import { watch } from 'vue'
+import { MerakApp, $$namespace, getInstance } from 'merak-vue'
+import { watch, onMounted } from 'vue'
 // eslint-disable-next-line vue/no-setup-props-destructure
 const props = defineProps<{
   routePath?: string
@@ -20,6 +19,9 @@ const props = defineProps<{
   afterMount?: () => void
 }>()
 
+onMounted(() => {
+  getInstance('vue_cli')!.lifeCycle.afterMount = RouteChange
+})
 function RouteChange() {
   console.log(props.routePath)
   $$namespace().emitter.emit('vue2App:router-change', {
@@ -28,6 +30,7 @@ function RouteChange() {
   })
   props.afterMount?.()
 }
+
 watch(
   () => props.routePath,
   async () => {
