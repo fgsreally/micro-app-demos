@@ -772,8 +772,8 @@ importers:
         specifier: ^3.2.12
         version: 3.2.12(vue@3.2.40)
       merak-vue:
-        specifier: 1.0.6
-        version: registry.npmmirror.com/merak-vue@1.0.6
+        specifier: 1.0.9
+        version: registry.npmmirror.com/merak-vue@1.0.9
       mitt:
         specifier: ^3.0.0
         version: 3.0.0
@@ -19637,10 +19637,10 @@ packages:
       - supports-color
     dev: false
 
-  registry.npmmirror.com/merak-core@1.0.5:
-    resolution: {integrity: sha512-h6KsW/b1oZnuG59iGq0xH6rrbs4+VPdl23rDLEEQUpEt6eoC8Vv90S9GXJc6lXdNIpUqrvn8LRX3lzzygUwhZA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/merak-core/-/merak-core-1.0.5.tgz}
+  registry.npmmirror.com/merak-core@1.0.8:
+    resolution: {integrity: sha512-Fd4S7NLQjTxtpEaZA91csd0fMhFqKnzO0cTRtWpiay/vH1TVZortJvXDfueFDVBLJTUCVOd/PrWy2J3o9Ra+2g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/merak-core/-/merak-core-1.0.8.tgz}
     name: merak-core
-    version: 1.0.5
+    version: 1.0.8
     dev: false
 
   registry.npmmirror.com/merak-helper@1.0.1:
@@ -19649,12 +19649,12 @@ packages:
     version: 1.0.1
     dev: false
 
-  registry.npmmirror.com/merak-vue@1.0.6:
-    resolution: {integrity: sha512-T212of0Z6u8L8rPg3We3XUFNmLjrhEAip2WFBH427xczHTcn7YcXo36iTTUaw7KoZjpeV8n6d0ttcojQm0ygFA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/merak-vue/-/merak-vue-1.0.6.tgz}
+  registry.npmmirror.com/merak-vue@1.0.9:
+    resolution: {integrity: sha512-mFfrXwct7TVslyBWTRjmx87oLyp1w9D7zpJ/vg8Qzadbbtp1uf1Nj4+n/asVWOHIk8Ge1h0JRwz90kFEJ8of4A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/merak-vue/-/merak-vue-1.0.9.tgz}
     name: merak-vue
-    version: 1.0.6
+    version: 1.0.9
     dependencies:
-      merak-core: registry.npmmirror.com/merak-core@1.0.5
+      merak-core: registry.npmmirror.com/merak-core@1.0.8
       merak-helper: registry.npmmirror.com/merak-helper@1.0.1
       vue: registry.npmmirror.com/vue@3.3.4
     dev: false

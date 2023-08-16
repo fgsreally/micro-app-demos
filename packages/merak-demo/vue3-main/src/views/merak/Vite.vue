@@ -6,6 +6,8 @@
     :props="{
       router: $router
     }"
+        @after-mount="RouteChange"
+
   ></merak-app>
 </template>
 
@@ -19,9 +21,7 @@ const props = defineProps<{
   keepAlive?: boolean
   afterMount?: () => void
 }>()
-onMounted(() => {
-  getInstance('vite_react')!.lifeCycle.afterMount = RouteChange
-})
+
 function RouteChange() {
   $$namespace().emitter.emit('viteApp:router-change', {
     path: props.routePath,

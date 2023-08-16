@@ -6,6 +6,8 @@
     :props="{
       router: $router
     }"
+            @after-mount="RouteChange"
+
   ></merak-app>
 </template>
 
@@ -18,9 +20,7 @@ const props = defineProps<{
   keepAlive?: boolean
   afterMount?: () => void
 }>()
-onMounted(() => {
-  getInstance('react')!.lifeCycle.afterMount = RouteChange
-})
+
 function RouteChange() {
   $$namespace().emitter.emit('reactApp:router-change', {
     path: props.routePath,

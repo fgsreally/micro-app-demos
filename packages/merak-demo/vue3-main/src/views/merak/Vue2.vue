@@ -6,6 +6,7 @@
     :props="{
       router: $router
     }"
+    @after-mount="RouteChange"
   ></merak-app>
 </template>
 
@@ -19,9 +20,6 @@ const props = defineProps<{
   afterMount?: () => void
 }>()
 
-onMounted(() => {
-  getInstance('vue_cli')!.lifeCycle.afterMount = RouteChange
-})
 function RouteChange() {
   console.log(props.routePath)
   $$namespace().emitter.emit('vue2App:router-change', {
