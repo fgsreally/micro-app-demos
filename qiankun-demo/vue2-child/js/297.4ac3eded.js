@@ -1,0 +1,2 @@
+"use strict";(self["webpackJsonp_@qiankun-demo/vue2-child"]=self["webpackJsonp_@qiankun-demo/vue2-child"]||[]).push([[297],{99297:function(e,n,u){u.r(n),u.d(n,{default:function(){return a}});var t=function(){var e=this,n=e._self._c;return n("router-view")},r=[],i={name:"Layout"},l=i,o=u(3419),s=(0,o.Z)(l,t,r,!1,null,"28413651",null),a=s.exports}}]);
+//# sourceMappingURL=297.4ac3eded.js.map

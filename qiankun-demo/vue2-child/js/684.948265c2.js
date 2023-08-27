@@ -1,2 +1,0 @@
-"use strict";(self["webpackJsonp_@qiankun-demo/vue2-child"]=self["webpackJsonp_@qiankun-demo/vue2-child"]||[]).push([[684],{92684:function(e,n,u){u.r(n),u.d(n,{default:function(){return c}});var i=function(){var e=this,n=e._self._c;return n("div",[e._v("vue2 CoexistView")])},s=[],t={name:"CoexistView"},a=t,l=u(12410),o=(0,l.Z)(a,i,s,!1,null,"aba1ee20",null),c=o.exports}}]);
-//# sourceMappingURL=684.948265c2.js.map
