@@ -1,7 +1,8 @@
 <template>
   <merak-app
-    name="react"
+    name="vite_react"
     :url="url"
+    keep-alive
     :props="{
       router: $router
     }"
@@ -19,17 +20,18 @@ const props = defineProps<{
 }>()
 
 function RouteChange() {
-  $$namespace().emitter.emit('reactApp:router-change', {
+  $$namespace().emitter.emit('viteApp:router-change', {
     path: props.routePath,
     replace: true
   })
   props.afterMount?.()
 }
+
 watch(
   () => props.routePath,
   async () => {
     RouteChange()
   }
 )
-const url = import.meta.env.VITE_REACT18_CHILD_ENTRY
+const url = import.meta.env.VITE_VITE_CHILD_ENTRY
 </script>

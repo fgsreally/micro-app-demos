@@ -2,7 +2,6 @@
   <merak-app
     name="vue_cli"
     :url="url"
-    :keep-alive="keepAlive"
     :props="{
       router: $router
     }"
@@ -11,12 +10,11 @@
 </template>
 
 <script lang="ts" setup>
-import { MerakApp, $$namespace, getInstance } from 'merak-vue'
-import { watch, onMounted } from 'vue'
+import { MerakApp, $$namespace } from 'merak-vue'
+import { watch } from 'vue'
 // eslint-disable-next-line vue/no-setup-props-destructure
 const props = defineProps<{
   routePath?: string
-  keepAlive?: boolean
   afterMount?: () => void
 }>()
 
@@ -32,7 +30,6 @@ function RouteChange() {
 watch(
   () => props.routePath,
   async () => {
-    console.log('watch')
     RouteChange()
   }
 )

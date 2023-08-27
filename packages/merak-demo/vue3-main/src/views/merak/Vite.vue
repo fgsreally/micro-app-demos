@@ -2,23 +2,19 @@
   <merak-app
     name="vite_react"
     :url="url"
-    :keep-alive="keepAlive"
     :props="{
       router: $router
     }"
-        @after-mount="RouteChange"
-
+    @after-mount="RouteChange"
   ></merak-app>
 </template>
 
 <script lang="ts" setup>
-import { getInstance } from 'merak-vue'
 import { MerakApp, $$namespace } from 'merak-vue'
-import { watch, onMounted } from 'vue'
+import { watch } from 'vue'
 // eslint-disable-next-line vue/no-setup-props-destructure
 const props = defineProps<{
   routePath?: string
-  keepAlive?: boolean
   afterMount?: () => void
 }>()
 

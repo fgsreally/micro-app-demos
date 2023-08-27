@@ -2,6 +2,7 @@
   <merak-app
     name="react"
     :url="url"
+    keep-alive
     :props="{
       router: $router
     }"

@@ -1,7 +1,8 @@
 <template>
   <merak-app
-    name="react"
+    name="vue_cli"
     :url="url"
+    keep-alive
     :props="{
       router: $router
     }"
@@ -19,17 +20,18 @@ const props = defineProps<{
 }>()
 
 function RouteChange() {
-  $$namespace().emitter.emit('reactApp:router-change', {
+  $$namespace().emitter.emit('vue2App:router-change', {
     path: props.routePath,
     replace: true
   })
   props.afterMount?.()
 }
+
 watch(
   () => props.routePath,
   async () => {
     RouteChange()
   }
 )
-const url = import.meta.env.VITE_REACT18_CHILD_ENTRY
+const url = import.meta.env.VITE_VUE2_CHILD_ENTRY
 </script>

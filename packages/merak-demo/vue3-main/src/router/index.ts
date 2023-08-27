@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useMenuStore } from '@/stores/menu'
 import { useUserStore } from '@/stores/user'
 import { user as userData } from '@/data/userData'
 import { setMicroAppLoading } from '@/utils/microAppLoading'
@@ -102,27 +101,24 @@ const router = createRouter({
       children: [
         {
           path: 'vue2',
-          component: () => import('@/views/merak/Vue2.vue'),
+          component: () => import('@/views/merak/Vue2-keep-alive.vue'),
           props: {
-            keepAlive: true,
             routePath: '/'
           }
         },
         {
           name: 'React18子应用保活',
           path: 'react18',
-          component: () => import('@/views/merak/React.vue'),
+          component: () => import('@/views/merak/React-keep-alive.vue'),
           props: {
-            keepAlive: true,
             routePath: '/'
           }
         },
         {
           name: 'Vite子应用保活',
           path: 'vite',
-          component: () => import('@/views/merak/Vite.vue'),
+          component: () => import('@/views/merak/Vite-keep-alive.vue'),
           props: {
-            keepAlive: true,
             routePath: '/'
           }
         }
