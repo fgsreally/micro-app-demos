@@ -12,7 +12,8 @@
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
     "ant-design-vue": "^3.2.12",
-    "merak-vue": "1.0.9",
+    "merak-helper": "file:.yalc/merak-helper",
+    "merak-vue": "file:.yalc/merak-vue",
     "mitt": "^3.0.0",
     "pinia": "^2.0.21",
     "vue": "^3.2.38",

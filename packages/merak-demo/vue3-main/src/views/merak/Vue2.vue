@@ -19,7 +19,6 @@ const props = defineProps<{
 }>()
 
 function RouteChange() {
-  console.log(props.routePath)
   $$namespace().emitter.emit('vue2App:router-change', {
     path: props.routePath,
     replace: true
@@ -30,6 +29,7 @@ function RouteChange() {
 watch(
   () => props.routePath,
   async () => {
+    console.log('watch')
     RouteChange()
   }
 )

@@ -1,0 +1,24 @@
+{
+  "name": "merak-vue",
+  "version": "1.0.12",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "merak-core": "1.0.11",
+    "merak-helper": "1.0.1",
+    "vue": "^3.2.47"
+  },
+  "yalcSig": "6d550f08a23f9907552c7a2ca4e96a1e"
+}

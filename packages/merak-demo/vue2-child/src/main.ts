@@ -36,6 +36,7 @@ $onExec(() => {
   if (isMerak()) {
     $namespace().emitter.on('changeUser', changeUser)
     $namespace().emitter.on('vue2App:router-change', (n: any) => {
+      console.log(n.path)
       router.replace(n.path).catch(() => true)
     })
   }
