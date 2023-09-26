@@ -12,7 +12,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "antd": "^4.24.12",
-    "merak-helper": "1.0.1",
+    "merak-helper": "2.0.0-alpha.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "CI=false && craco build",
+    "build": " CI=false && craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },

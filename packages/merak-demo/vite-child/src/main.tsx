@@ -8,12 +8,11 @@ import { store } from "@/stores/store";
 import { Spin } from "antd";
 import { setUser } from "@/stores/userSlice";
 import {
-  $onExec,
-  $onDestroy,
-  isMerak,
-  $instance,
+$onMount,
+isMerak,
+$deactive,
+$onUnmount,
   $namespace,
-  $done,
 } from "merak-helper";
 
 function setup() {
@@ -51,20 +50,20 @@ function routerChangeListener(e: any) {
 
 let root: ReactDOM.Root | undefined;
 
-$onExec(() => {
-  if (isMerak()) {
+$onMount(() => {
+  if (isMerak) {
     $namespace().emitter.on("changeUser", changeUserListener);
     $namespace().emitter.on("viteApp:router-change", routerChangeListener);
   }
 
   root = setup();
 });
-$onDestroy(() => {
+$onUnmount(() => {
   root?.unmount();
-  if (isMerak()) {
+  if (isMerak) {
     $namespace().emitter.off("changeUser", changeUserListener);
 
     $namespace().emitter.off("viteApp:router-change");
   }
-  $done();
+  $deactive();
 });

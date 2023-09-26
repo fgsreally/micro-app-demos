@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import { store } from "@/stores/store";
 import { Spin } from "antd";
 import { setUser } from "@/stores/userSlice";
-import { $onExec, $done, isMerak, $onDestroy, $namespace } from "merak-helper";
+import { $onMount,$onUnmount, $namespace, $deactive,isMerak } from "merak-helper";
 function setup() {
   const container = document.getElementById("root")!;
 
@@ -44,8 +44,8 @@ function routerChangeListener(e: any) {
 
 let root: ReactDOM.Root | undefined;
 
-$onExec(() => {
-  if (isMerak()) {
+$onMount(() => {
+  if (isMerak) {
     console.log('exec')
     const { emitter } = $namespace();
     emitter.on("changeUser", changeUserListener);
@@ -53,9 +53,10 @@ $onExec(() => {
   }
   root = setup();
 });
-$onDestroy(() => {
+$onUnmount(() => {
   root?.unmount();
-  if (isMerak()) {
+
+  if (isMerak) {
     console.log('destroy',root)
 
     const { emitter } = $namespace();
@@ -63,7 +64,7 @@ $onDestroy(() => {
     emitter.off("changeUser", changeUserListener);
     emitter.off("reactApp:router-change", routerChangeListener);
   }
-  $done();
+  $deactive();
 });
 
 //@ts-expect-error webpack public path

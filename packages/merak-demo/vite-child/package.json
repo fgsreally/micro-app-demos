@@ -11,7 +11,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "antd": "^4.23.4",
-    "merak-helper": "1.0.1",
+    "merak-helper": "2.0.0-alpha.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",

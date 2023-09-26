@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/stores/storeHooks'
 import { Alert, Cascader, Form, Space } from 'antd'
-import { $props, isMerak } from 'merak-helper'
+import { $props ,isMerak} from 'merak-helper'
 import { useState } from 'react'
 
 
@@ -39,8 +39,7 @@ const options = [
 
 let router: any | undefined
 
-
-if (isMerak()) {
+if (isMerak) {
    router = $props('router')
   
 }

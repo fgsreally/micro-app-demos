@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-        'merak-core': 'http://127.0.0.1:3000/prod/index.mjs'
+        // 'merak-core': 'http://127.0.0.1:3000/prod/index.mjs'
       }
     }
   }

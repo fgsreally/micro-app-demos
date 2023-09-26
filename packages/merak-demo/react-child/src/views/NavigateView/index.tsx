@@ -1,8 +1,8 @@
 import { Button, Space, Typography } from 'antd'
-import { $props, isMerak } from 'merak-helper'
+import { $props,  isMerak} from 'merak-helper'
 
 const handleClick = ({ url }: { url: string }) => {
-  if (isMerak()) {
+  if (isMerak) {
     const router = $props('router')
     router?.push(url)
   }

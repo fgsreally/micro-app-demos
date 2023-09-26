@@ -15,7 +15,7 @@ import { isMerak, $props } from 'merak-helper'
 
 let router: any | undefined
 
-if (isMerak()) {
+if (isMerak) {
   router = $props('router')
 }
 
