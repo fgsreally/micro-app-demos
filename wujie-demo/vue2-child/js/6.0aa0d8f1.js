@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk_wujie_demo_vue2_child"]=self["webpackChunk_wujie_demo_vue2_child"]||[]).push([[6],{36006:function(e,u,i){i.r(u),i.d(u,{default:function(){return r}});var n=function(){var e=this,u=e._self._c;return u("div",[e._v("vue2 CoexistView")])},t=[],_={name:"CoexistView"},l=_,s=i(3419),c=(0,s.Z)(l,n,t,!1,null,"aba1ee20",null),r=c.exports}}]);
+//# sourceMappingURL=6.0aa0d8f1.js.map
